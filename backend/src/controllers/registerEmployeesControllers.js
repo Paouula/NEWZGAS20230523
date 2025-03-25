@@ -1,6 +1,6 @@
 import employeesModel from "../models/employees.js";
-import bcryptjs from "bcryptjs";
-import jsonwebtoken from "jsonwebtoken";
+import bcryptjs from "bcryptjs"; //Encripta la contraseña
+import jsonwebtoken from "jsonwebtoken"; //Token
 import {config} from "../config.js"
 
 const registerEmployeesController = {};
@@ -36,15 +36,16 @@ registerEmployeesController.register = async (req, res) => {
             //Token
             jsonwebtoken.sign(
                 //1.Que voy a guardar
-                {id: newEmployee._id},
+                {id: newEmployees._id},
                 //2.Secreto
                 config.JWT.secret,
                 //3.Cuando expira
                 {expiresIn: config.JWT.expiresIn},
                 //4.Funcion flecha
                 (error, token) => {
-                    if(error) console.log(error)
-                        res.cookie("authToken", token)
+                    if(error) console.log(error);
+                        res.cookie("authToken", token);
+                    res.json({message: "Empleado Registrado"})
                 }
             )
     

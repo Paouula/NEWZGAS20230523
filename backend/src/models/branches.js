@@ -17,9 +17,7 @@ const branchesSchema = Schema({
     },
     telephone:{
         type: String,
-        require: true,
-        minLength: 8,
-        maxLength: 12
+        require: true
     },
     schedule: {
         type: String,

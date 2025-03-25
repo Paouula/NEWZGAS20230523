@@ -41,24 +41,22 @@ const employeesSchema = Schema({
     password:{
         type: String,
         require: true,
-        minLength: 8,
-        maxLength: 24
+      
     },
     telephone:{
         type: String,
         require: true,
-        minLength: 8,
-        maxLength: 12
+  
     },
     dui:{
         type: String,
         requiere: true,
-        minLength: 10,
+ 
     },
     isssNumber:{
         type: String,
         requiere: true,
-        maxLength: 9
+ 
     },
     isVerifid:{
         type: Boolean,
@@ -69,4 +67,4 @@ const employeesSchema = Schema({
     strict: false
 })
 
-export default model("Employeses", employeesSchema);
+export default model("Employees", employeesSchema);

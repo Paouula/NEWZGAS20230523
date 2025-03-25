@@ -31,20 +31,15 @@ const clientsSchema = Schema({
     },
     password:{
         type: String,
-        require: true,
-        minLength: 8,
-        maxLength: 24
+        require: true
     },
     telephone:{
         type: String,
-        require: true,
-        minLength: 8,
-        maxLength: 12
+        require: true
     },
     dui:{
         type: String,
-        requiere: true,
-        minLength: 10,
+        requiere: true
     },
     isVerifid:{
         type: Boolean,

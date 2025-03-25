@@ -8,6 +8,8 @@ import ReviewRoutes from "./src/routes/review.js";
 import EvaluationsRoutes from "./src/routes/evaluations.js"
 import RegistrarEmployees from "./src/routes/registerEmployees.js"
 import cookieParser from "cookie-parser";
+import loginRoutes from "./src/routes/login.js";
+import logoutRoutes from "./src/routes/logout.js";
 
 
 //Cree una constante que es igual a la libreria
@@ -33,6 +35,10 @@ app.use("/api/employees", EmployeesRoutes);
 app.use("/api/evaluations", EvaluationsRoutes);
 
 app.use("/api/regiterEmployeess", RegistrarEmployees);
+
+app.use("/api/login", loginRoutes);
+
+app.use("/api/logout", logoutRoutes);
 
 export default app;
 
