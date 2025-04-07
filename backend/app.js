@@ -10,6 +10,7 @@ import RegistrarEmployees from "./src/routes/registerEmployees.js"
 import cookieParser from "cookie-parser";
 import loginRoutes from "./src/routes/login.js";
 import logoutRoutes from "./src/routes/logout.js";
+import registerClient from "./src/routes/registerClient.js";
 
 
 //Cree una constante que es igual a la libreria
@@ -39,6 +40,8 @@ app.use("/api/regiterEmployeess", RegistrarEmployees);
 app.use("/api/login", loginRoutes);
 
 app.use("/api/logout", logoutRoutes);
+
+app.use("/api/registerClients", registerClient);
 
 export default app;
 
